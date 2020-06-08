@@ -1,11 +1,11 @@
-# Uni Tap Blocker
+﻿# Uni Tap Blocker
 
 タップをブロックするインスタンスを管理するクラス
 
 ## 使用例
 
 ```cs
-using UniTapBlocker;
+using Kogane;
 using UnityEngine;
 
 public class Example : MonoBehaviour

@@ -1,4 +1,4 @@
-﻿namespace UniTapBlocker
+﻿namespace Kogane
 {
 	/// <summary>
 	/// タップをブロックするインスタンスのインターフェイス

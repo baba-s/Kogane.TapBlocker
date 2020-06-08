@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UniTapBlocker
+namespace Kogane
 {
 	/// <summary>
 	/// タップをブロックするインスタンスを管理するクラス
