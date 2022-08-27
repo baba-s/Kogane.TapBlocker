@@ -1,4 +1,4 @@
-﻿# Uni Tap Blocker
+﻿# Kogane Tap Blocker
 
 タップをブロックするインスタンスを管理するクラス
 
