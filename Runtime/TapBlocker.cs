@@ -53,7 +53,17 @@ namespace Kogane
         /// <summary>
         /// タップをブロックするかどうかが変更された時に呼び出されます
         /// </summary>
-        public static event Action OnChange;
+        public static Action OnChange { get; set; }
+
+        /// <summary>
+        /// タップをブロックするインスタンスが追加された時に呼び出されます
+        /// </summary>
+        public static Action<TapBlocker> OnAdd { get; set; }
+
+        /// <summary>
+        /// タップをブロックするインスタンスが削除された時に呼び出されます
+        /// </summary>
+        public static Action<TapBlocker> OnRemove { get; set; }
 
         //================================================================================
         // 関数
@@ -66,6 +76,7 @@ namespace Kogane
             Name = name;
             ms_list.Add( this );
             OnChange?.Invoke();
+            OnAdd?.Invoke( this );
         }
 
         /// <summary>
@@ -77,6 +88,7 @@ namespace Kogane
             m_isDispose = true;
             ms_list.Remove( this );
             OnChange?.Invoke();
+            OnRemove?.Invoke( this );
         }
 
         //================================================================================
