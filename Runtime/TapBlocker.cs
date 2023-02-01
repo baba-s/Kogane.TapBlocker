@@ -65,6 +65,11 @@ namespace Kogane
         /// </summary>
         public static Action<TapBlocker> OnRemove { get; set; }
 
+        /// <summary>
+        /// インスタンス名を取得する時に呼び出されます
+        /// </summary>
+        public static Func<string> OnGetName { get; set; }
+
         //================================================================================
         // 関数
         //================================================================================
@@ -100,6 +105,15 @@ namespace Kogane
         public static TapBlocker Block( string name )
         {
             var blocker = new TapBlocker( name );
+            return blocker;
+        }
+
+        /// <summary>
+        /// タップのブロックを開始します
+        /// </summary>
+        public static TapBlocker Block()
+        {
+            var blocker = new TapBlocker( OnGetName?.Invoke() ?? "" );
             return blocker;
         }
 
