@@ -118,6 +118,14 @@ namespace Kogane
         }
 
         /// <summary>
+        /// タップのブロックを開始します
+        /// </summary>
+        public static TapBlocker BlockIf( bool condition )
+        {
+            return condition ? Block() : null;
+        }
+
+        /// <summary>
         /// すべてのタップのブロックを解除します
         /// </summary>
         public static void Clear()
